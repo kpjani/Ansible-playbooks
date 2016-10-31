@@ -1,0 +1,16 @@
+---
+- hosts: my_hosts
+  connection: local
+  tasks:
+      - name: Create file
+        file: path=/tmp/yallo state=touch
+
+#- hosts: my_hosts
+#  connection: local
+#  become: yes
+#  tasks:
+#      - name: Create user
+#        user: name=mario shell=/bin/zsh
+#
+#      - name: Install zlib
+#        yum: name=zlib state=latest
