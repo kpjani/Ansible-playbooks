@@ -1,0 +1,13 @@
+---
+- name: install nodejs
+   hosts: my_hosts
+   connection: local
+   gather_facts: True
+   become: yes
+   become_method: sudo
+   tasks:
+       - name: add apt key for nodesource
+         apt_key: url=https://deb.nodesource.com/gpgkey/nodesource.gpg.key
+
+       - name: add repo for nodesource
+         
